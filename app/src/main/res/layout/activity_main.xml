@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clock Widget Settings or sum shit"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Select sum Theme:" />
+
+        <!-- Damn beta -->
+        <Button
+            android:id="@+id/btn_sooner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="htc-20645 (android alpha sigma)" />
+
+        <!-- 1.0 -->
+        <Button
+            android:id="@+id/btn_classic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android 1.0" />
+
+        <!-- GB -->
+        <Button
+            android:id="@+id/btn_gingerbread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android Gingerbread" />
+
+        <!-- HC -->
+        <Button
+            android:id="@+id/btn_hc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android Honeycomb" />
+
+        <!-- ICS -->
+        <Button
+            android:id="@+id/btn_ics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android Ice Cream Sandwich" />
+
+        <!-- Digital Clock (Oreo+) -->
+        <Button
+            android:id="@+id/btn_digitalics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android ICS Digital" />
+
+        <!-- ICS Beta IRK40C -->
+        <Button
+            android:id="@+id/btn_irk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android ICS Beta IRK40C" />
+
+        <!-- ICS Beta GSM -->
+        <Button
+            android:id="@+id/btn_ics_gsm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android ICS Beta GSMArena build" />
+
+        <!-- JB -->
+        <Button
+            android:id="@+id/btn_jb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android Jelly Bean" />
+
+        <!-- Digital Clock (Oreo+) -->
+        <Button
+            android:id="@+id/btn_digital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android JB Digital" />
+
+        <!-- Smasnug Modern clock -->
+        <Button
+            android:id="@+id/btn_modern"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Samsung 'modern' clock" />
+
+        <!-- Smasnug FUNKEYYY clock -->
+        <Button
+            android:id="@+id/btn_funky"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Samsung 'funky' clock" />
+
+        <!-- Samsung GB modern or smth -->
+        <Button
+            android:id="@+id/btn_gbsam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Samsung 'modern' clock (GB)" />
+
+        <!-- Samsung GB "Simpel" or smth -->
+        <Button
+            android:id="@+id/btn_gbsam1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Samsung 'clean' clock (GB)" />
+
+
+        <!-- Digital Clock (Oreo+) -->
+        <Button
+            android:id="@+id/btn_digitalkk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android KitKat Digital" />
+
+
+        <!-- Material gurl -->
+        <Button
+            android:id="@+id/btn_material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android 12 Material" />
+
+        <CheckBox
+            android:id="@+id/toggle_gjinka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toggle android gals (dont)"
+            android:checked="true"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/mascot_gjinka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="900dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Android shit" />
+
+    </LinearLayout>
+</ScrollView>
