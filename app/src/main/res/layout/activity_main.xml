@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clock Widget Settings or sum shit"
+            android:text="Clock Widget Settings"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -22,14 +22,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Select sum Theme:" />
+            android:text="Select a Theme:" />
 
         <!-- Damn beta -->
         <Button
             android:id="@+id/btn_sooner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="htc-20645 (android alpha sigma)" />
+            android:text="htc-20645 (Android Development" />
 
         <!-- 1.0 -->
         <Button
@@ -137,22 +137,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Android 12 Material" />
-
-        <CheckBox
-            android:id="@+id/toggle_gjinka"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Toggle android gals (dont)"
-            android:checked="true"
-            android:textColor="#FFFFFF" />
-
-        <ImageView
-            android:id="@+id/mascot_gjinka"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="900dp"
-            android:adjustViewBounds="true"
-            android:contentDescription="Android shit" />
 
     </LinearLayout>
 </ScrollView>

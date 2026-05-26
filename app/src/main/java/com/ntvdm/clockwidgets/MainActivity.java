@@ -174,106 +174,18 @@ public class MainActivity extends Activity {
         Button btndigitalics = (Button) findViewById(R.id.btn_digitalics);
         btndigitalics.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {applyTheme("digitalics");
-                Toast.makeText(MainActivity.this, "meant for the losck screen", Toast.LENGTH_SHORT).show();
+            public void onClick(View v) {
+                // needs API 17 (4.2) as this uses TextClock for the Date
+                if (android.os.Build.VERSION.SDK_INT >= 17) {
+                    applyTheme("digitalics");
+                } else {
+                    Toast.makeText(MainActivity.this, "Android 4.2+ only", Toast.LENGTH_SHORT).show();
+                }
+                Toast.makeText(MainActivity.this, "meant for the lock screen", Toast.LENGTH_SHORT).show();
                 }
 
         });
 
-        final ImageView mascot = (ImageView) findViewById(R.id.mascot_gjinka);
-        CheckBox toggle = (CheckBox) findViewById(R.id.toggle_gjinka);
-
-        final SharedPreferences prefs = getSharedPreferences("ClockPrefs", MODE_PRIVATE);
-        boolean isVisible = prefs.getBoolean("show_mascot", true);
-        toggle.setChecked(isVisible);
-        mascot.setVisibility(isVisible ? View.VISIBLE : View.GONE);
-
-        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                prefs.edit().putBoolean("show_mascot", isChecked).apply();
-
-                mascot.setVisibility(isChecked ? View.VISIBLE : View.GONE);
-
-                String status = isChecked ? "enjoy cringe" : "you killed em.";
-                Toast.makeText(MainActivity.this, status, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        // funny shits
-        int sdk = android.os.Build.VERSION.SDK_INT;
-
-        if (sdk >= 36) { // LATEST ASSHOLE
-            mascot.setImageResource(R.drawable.gjinka_berice);
-
-        } else if (sdk == 35) { // androd 15
-            mascot.setImageResource(R.drawable.gjinka_vannela);
-
-        } else if (sdk == 34) { // upside down WHAT
-            mascot.setImageResource(R.drawable.gjinka_upsica);
-
-        } else if (sdk == 33) { // Tirashitsu
-            mascot.setImageResource(R.drawable.gjinka_tifu);
-
-        } else if (sdk >= 31 && sdk <= 32) { // snowbro
-            mascot.setImageResource(R.drawable.gjinka_snowie);
-
-        } else if (sdk == 30) { // androd 11
-            mascot.setImageResource(R.drawable.gjinka_reveca);
-
-        } else if (sdk == 29) { // androd 10
-            mascot.setImageResource(R.drawable.gjinka_quincie);
-
-        /* } else if (sdk == 28) { // the pie woman
-            mascot.setImageResource(R.drawable.gjinka_paifira); */
-
-        } else if (sdk >= 26 && sdk <= 27) { // octopus head
-            mascot.setImageResource(R.drawable.gjinka_oaklee);
-
-        /* } else if (sdk >= 24 && sdk <= 25) { // meow meow
-            mascot.setImageResource(R.drawable.gjinka_nina); */
-
-        } else if (sdk == 23) { // fluff v6
-            mascot.setImageResource(R.drawable.gjinka_marshymo);
-
-        } else if (sdk >= 21 && sdk <= 22) { // material girl
-            mascot.setImageResource(R.drawable.gjinka_lollypo);
-
-        } else if (sdk == 19 || sdk == 20) { // kitkat
-            mascot.setImageResource(R.drawable.gjinka_kathie);
-
-        } else if (sdk >= 16 && sdk <= 18) { // jellybn
-            mascot.setImageResource(R.drawable.gjinka_jellybo);
-
-        } else if (sdk >= 14 && sdk <= 15) { // ics
-            mascot.setImageResource(R.drawable.gjinka_icelyn);
-
-        } else if (sdk >= 11 && sdk <= 13) { // bee
-            mascot.setImageResource(R.drawable.gjinka_haniku);
-
-        } else if (sdk == 10 || sdk == 9) { // assbread
-            mascot.setImageResource(R.drawable.gjinka_genny);
-
-        } else {
-            // default to Apphie cuz why not
-            mascot.setImageResource(R.drawable.gjinka_apphie);
-        }
-
-        // doze check for marshy+
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            Intent intent = new Intent();
-            String packageName = getPackageName();
-            PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
-
-            if (!pm.isIgnoringBatteryOptimizations(packageName)) {
-                intent.setAction(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
-                intent.setData(Uri.parse("package:" + packageName));
-                startActivity(intent);
-
-                Toast.makeText(this, "pleeaaseee disable battery optimizations or android will kill the clock", Toast.LENGTH_LONG).show();
-            }
-        }
     }
 
     private void applyTheme(String themeKey) {

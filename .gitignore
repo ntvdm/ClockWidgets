@@ -1,21 +1,9 @@
-# Built application files
-*.apk
-*.ap_
-*.dex
-*.class
-
-# Libraries
-*.jar
-*.aar
-
-# Local files
-.gradle/
-.idea/
-build/
-local.properties
 *.iml
-
-# OS generated files
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
 .DS_Store
-._*
-Thumbs.db
+/build
+/captures
+.externalNativeBuild
